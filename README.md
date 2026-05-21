@@ -14,18 +14,18 @@ Project website simple ini diperuntukkan submission tugas **Dasar Pemrograman We
 
 ### Warna yang digunakan
 Warna yang dipilih untuk website ini pastel.
-| Color | Preview |
-|---|---|
-| pink | ![pink](https://img.shields.io/badge/pink-FFC2D1?style=for-the-badge) |
-| pink-light | ![Secondary](https://img.shields.io/badge/pinklight-FFE5EC?style=for-the-badge) |
-| green | ![green](https://img.shields.io/badge/green-B9FBC0?style=for-the-badge) |
-| green-light | ![green](https://img.shields.io/badge/greenlight-E8F5E9?style=for-the-badge) |
-| yellow | ![yellow](https://img.shields.io/badge/yellow-FBE7C6?style=for-the-badge) |
-| yellow-light | ![yellow](https://img.shields.io/badge/yellowlight-FFFDF0?style=for-the-badge) |
-| purple | ![purple](https://img.shields.io/badge/purple-E8C5E5?style=for-the-badge) |
-| purple-light | ![purple-light](https://img.shields.io/badge/purplelight-F8F0F8?style=for-the-badge) |
-| orange | ![orange](https://img.shields.io/badge/orange-FFD6A5?style=for-the-badge) |
-| blue | ![blue](https://img.shields.io/badge/blue-B5E2FA?style=for-the-badge) |
+| Warna | Tampilan | Kode |
+|---|---| --- |
+| pink | ![pink](https://img.shields.io/badge/pink-FFC2D1?style=for-the-badge) | #FFC2D1
+| pink-light | ![Secondary](https://img.shields.io/badge/pinklight-FFE5EC?style=for-the-badge) | #FFE5EC
+| green | ![green](https://img.shields.io/badge/green-B9FBC0?style=for-the-badge) | #E8F5E9
+| green-light | ![green](https://img.shields.io/badge/greenlight-E8F5E9?style=for-the-badge) | #E8F5E9
+| yellow | ![yellow](https://img.shields.io/badge/yellow-FBE7C6?style=for-the-badge) | #FBE7C6
+| yellow-light | ![yellow](https://img.shields.io/badge/yellowlight-FFFDF0?style=for-the-badge) | #FFFDF0
+| purple | ![purple](https://img.shields.io/badge/purple-E8C5E5?style=for-the-badge) | #E8C5E5
+| purple-light | ![purple-light](https://img.shields.io/badge/purplelight-F8F0F8?style=for-the-badge) | #F8F0F8
+| orange | ![orange](https://img.shields.io/badge/orange-FFD6A5?style=for-the-badge) | #FFD6A5
+| blue | ![blue](https://img.shields.io/badge/blue-B5E2FA?style=for-the-badge) | #B5E2FA
 ---
 
 ## Kontributor & Kontribusi
