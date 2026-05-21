@@ -1,0 +1,484 @@
+/* ==========================================================================
+   Design System (Neobrutalism Pastel Style)
+   ========================================================================== */
+
+/* Define Global Variables */
+:root {
+  --bg-primary: #FAF6F0;      
+  --text-dark: #1A1A1A;       
+  --border-width: 3px;        
+  
+  /* Pastel Accent Colors */
+  --pastel-pink: #FFC2D1;      
+  --pastel-pink-light: #FFE5EC;
+  --pastel-green: #B9FBC0;    
+  --pastel-green-light: #E8F5E9;
+  --pastel-yellow: #FBE7C6;   
+  --pastel-yellow-light: #FFFDF0;
+  --pastel-purple: #E8C5E5;   
+  --pastel-purple-light: #F8F0F8;
+  --pastel-orange: #FFD6A5;    
+  --pastel-blue: #B5E2FA;     
+  
+  /* Font Families */
+  --font-heading: 'Lexend', 'Outfit', sans-serif;
+  --font-body: 'Outfit', 'Lexend', sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Reusable Neobrutalist Component Styling
+   ========================================================================== */
+
+/* Standard Card styling with flat shadow and dark border */
+.card-base, .header-card, .article-card, .aside-card, .footer-card {
+  background-color: #FFFFFF;
+  border: var(--border-width) solid var(--text-dark);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px 0px var(--text-dark);
+  padding: 24px;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Card hover effect */
+.card-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px 0px var(--text-dark);
+}
+
+/* Subtitle and headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+
+.header-card {
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--pastel-purple-light);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-content h1 {
+  display: inline-block;
+  padding: 4px 16px;
+  background-color: var(--pastel-purple);
+  border: var(--border-width) solid var(--text-dark);
+  border-radius: 8px;
+  transform: rotate(-1.5deg);
+  box-shadow: 4px 4px 0px 0px var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* Navigation Menu */
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Navigation button styling */
+.nav-btn {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  background-color: #FFFFFF;
+  border: 2px solid var(--text-dark);
+  border-radius: 8px;
+  box-shadow: 3px 3px 0px 0px var(--text-dark);
+  transition: all 0.15s ease-in-out;
+}
+
+.nav-btn:hover {
+  background-color: var(--pastel-yellow);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px 0px var(--text-dark);
+}
+
+.nav-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px 0px var(--text-dark);
+}
+
+/* Highlight item (Dicoding Profile) */
+.nav-btn.highlight-btn {
+  background-color: var(--pastel-orange);
+}
+
+.nav-btn.highlight-btn:hover {
+  background-color: #FFF;
+  color: var(--text-dark);
+}
+
+/* ==========================================================================
+   Main Layout Grid/Flexbox
+   ========================================================================== */
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Articles Area */
+.articles-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.article-card {
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.article-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px 0px var(--text-dark);
+}
+
+/* Article Specific Colors */
+#klepon {
+  background-color: var(--pastel-green-light);
+}
+#klepon h2 {
+  color: #1b5e20;
+}
+#kue-mangkok {
+  background-color: var(--pastel-pink-light);
+}
+#kue-mangkok h2 {
+  color: #880e4f;
+}
+#lapis-legit {
+  background-color: var(--pastel-yellow-light);
+}
+#lapis-legit h2 {
+  color: #e65100;
+}
+
+/* Badge overlay inside article */
+.badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 2px solid var(--text-dark);
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-shadow: 2px 2px 0px 0px var(--text-dark);
+}
+
+.badge-green { background-color: var(--pastel-green); }
+.badge-pink { background-color: var(--pastel-pink); }
+.badge-yellow { background-color: var(--pastel-yellow); }
+
+/* Article Content Layout (Side-by-Side) */
+.article-body-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.article-text {
+  flex: 2;
+}
+
+/* Images formatting */
+.img-wrapper {
+  flex: 1;
+  flex-shrink: 0;
+  max-width: 250px;    /* Lebar gambar yang proporsional di samping teks */
+  width: 100%;
+  border: var(--border-width) solid var(--text-dark);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 4px 4px 0px 0px var(--text-dark);
+  background-color: #FFFFFF;
+  aspect-ratio: 1 / 1; /* Membuat container menjadi kotak sempurna */
+}
+
+.article-img {
+  width: 100%;
+  height: 100%;        /* Mengikuti tinggi pembungkusnya */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-img {
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   Aside (Sidebar)
+   ========================================================================== */
+
+.aside-card {
+  flex: 1.2;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.aside-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px 0px var(--text-dark);
+}
+
+.aside-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+/* Wajib: Menampilkan foto di elemen aside */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: var(--border-width) solid var(--text-dark);
+  box-shadow: 4px 4px 0px 0px var(--text-dark);
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.profile-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--pastel-blue);
+  padding: 2px 8px;
+  border: 1.5px solid var(--text-dark);
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.aside-divider {
+  border: 0;
+  border-top: var(--border-width) solid var(--text-dark);
+  margin: 16px 0;
+}
+
+.aside-body h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--text-dark);
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+/* Profile details table */
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.profile-table th, .profile-table td {
+  border: 2px solid var(--text-dark);
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.profile-table th {
+  background-color: var(--pastel-orange);
+  font-weight: 800;
+  width: 35%;
+}
+
+.profile-table td {
+  background-color: #FFFFFF;
+}
+
+.profile-table a {
+  color: var(--text-dark);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.profile-table a:hover {
+  background-color: var(--pastel-yellow);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer-card {
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--pastel-purple);
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+.footer-card p {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   Media Queries (Responsive Layout)
+   ========================================================================== */
+
+/* Tablet View & Below (Screen < 992px) */
+@media screen and (max-width: 992px) {
+  .main-container {
+    gap: 20px;
+  }
+  
+  .articles-container {
+    flex: 2;
+  }
+}
+
+/* Mobile View (Screen < 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 12px;
+    gap: 16px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .header-card, .footer-card {
+    padding: 16px;
+  }
+  
+  .nav-bar {
+    justify-content: center;
+  }
+  
+  .main-container {
+    flex-direction: column; /* Stack vertically (Flexbox) */
+    gap: 16px;
+  }
+  
+  .articles-container {
+    width: 100%;
+  }
+  
+  .article-body-layout {
+    flex-direction: column; /* Stack image and text vertically on mobile */
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .img-wrapper {
+    max-width: 240px; /* Center-aligned smaller square on mobile */
+  }
+  
+  .aside-card {
+    width: 100%;
+    align-self: stretch;
+  }
+  
+  /* Slight adjustments to borders/shadows for smaller screens to keep clean aesthetics */
+  .card-base, .header-card, .article-card, .aside-card, .footer-card {
+    box-shadow: 4px 4px 0px 0px var(--text-dark);
+  }
+  
+  .card-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px var(--text-dark);
+  }
+}
+
+/* Extra Small Devices (Screen < 480px) */
+@media screen and (max-width: 480px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  .nav-btn {
+    text-align: center;
+    width: 100%;
+  }
+}
